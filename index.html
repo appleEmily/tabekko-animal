@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>たべっ子どうぶつ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery読み込んでまぁす vr3.5.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="js/jquery.bgswitcher.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="topPic">
+            <nav>
+                <ul>
+                    <li><a href="">ギャラリー</a></li>
+                    <li><a href="">グッズ</a></li>
+                    <li><a href="">シリーズ</a></li>
+                    <li><a href="/index.html#about">About</a></li>
+
+                </ul>
+            </nav>
+
+            <h1>たべっ子どうぶつ</h1>
+        </div>
+        <!--       bgswicher を導入して背景の写真を変えます-->
+        <script>
+            $(".topPic").bgswitcher({
+                images: ["images/test1.jpeg", "images/test2.jpg", "images/test3.jpg", "images/test4.jpg"],
+            });
+        </script>
+    </header>
+
+    <div class="wrapper" id="about">
+        <h2>About</h2>
+        <div class="section" id="about-text">
+            <p id="introduction">昔から愛されるビスケット菓子「たべっ子どうぶつ」<br>
+                可愛らしい動物の形と何ともいえない甘じょっぱい味わいが<br>好きな人も多いのではないでしょうか。<br>
+                何気なく食べていた子供の頃。<br>
+                大人になってもふと子供の頃を思い出して食べてくなり<br>
+                仕事や学校の帰り道に手にとっている方も<br>
+                多いのではないでしょうか。</p>
+                
+            <div class="box" id="box-left">
+                <h3>株式会社ギンビスの由来</h3>
+                <p>「銀座」＋「ビスケット」という由来から<br>
+                    「ギンビス」という社名がついています。<br>
+                    創業当初は銀座ベーカリー<br>
+                    という会社でしたが、その後<br>
+                    「銀座で一番おいしいビスケット」を掲げ、<br>
+                    現在のギンビスとなりました。</p>
+            </div>
+            <div class="box" id="box-right">
+                <h3>たべっ子どうぶつのルーツ</h3>
+                <div class="ganso">
+                    <img class="ganso-image" src="images/tabekko.png" alt="">
+                    <p class="ganso-text">たべっ子どうぶつの元祖！<br>
+                        「動物四十七士」には47種類<br>
+                        の動物が入っています。<br>
+                        現在のたべっ子どうぶつには<br>
+                        46種類の動物がいます。<br>
+                        コアラがレアです！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+
+</body>
+
+</html>

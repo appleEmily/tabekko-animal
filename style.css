@@ -1,0 +1,151 @@
+/*スクロールスムーズに。*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*フォントを入れます*/
+@font-face {
+    font-family: "mushin";
+    src: url("../fonts/mushin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "gokuboso";
+    src: url("../fonts/chogokubosogothic_5.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+}
+
+.topPic {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    position: relative;
+    font-family: "gokuboso";
+    overflow: hidden;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.6);
+    background-color: rgba(2555, 255, 255, 0.6);
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+    color: #333;
+    padding-bottom: 3px;
+}
+
+nav a:after {
+    content: '';
+    width: 0;
+    transition: all 0.4s ease;
+    border-bottom: 3px solid #B3B3B3;
+    display: block;
+}
+
+nav a:hover:after {
+    width: 100%;
+    border-bottom: 1px solid #B3B3B3;
+
+    /*    なぜか２カ所反応することがある。*/
+}
+
+header h1 {
+    position: relative;
+    font-family: "mushin";
+    font-size: 80px;
+    color: #333;
+    margin-left: 30px;
+    ;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.section {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+/*各セッションタイトル*/
+.wrapper h2 {
+    font-family: "mushin";
+    font-size: 50px;
+    margin: 100px 0 80px 0;
+}
+
+.section p {
+    text-align: left;
+    font-family: "gokuboso";
+    font-size: 20px;
+    width: auto;
+}
+
+#introduction {
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 500px;
+}
+
+/*めも*/
+/*wrapperって作ったやつに線が引けレア良い。けど、js次第ではwrapper要らなくて、sectionでいけるのかも？*/
+
+
+.box {
+    border: 1px solid #333;
+    max-width: 60%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.box p {
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.box h3 {
+    font-family: "mushin";
+    font-size: 25px;
+    width: auto;
+}
+
+
+#box-right {
+    float: right;
+}
+
+#box-left p {
+    padding: 0 0 30px;
+
+}
+
+.ganso {
+    margin-bottom: 20px;
+}
+
+.ganso-image {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.ganxo-text {
+    display: table-cell;
+    float: left;
+    
+/*    テキストをどのように中央に表示するか。*/
+}
