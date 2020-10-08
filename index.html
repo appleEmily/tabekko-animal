@@ -25,13 +25,14 @@
 
 <body>
     <header>
-        <div class="topPic">
+        <div class="topPic" id="top">
             <nav>
                 <ul>
                     <li><a href="">ギャラリー</a></li>
                     <li><a href="">グッズ</a></li>
                     <li><a href="/index.html#collection">シリーズ</a></li>
                     <li><a href="/index.html#about">About</a></li>
+                    <li><a href="/index.html#top">Top</a></li>
 
                 </ul>
             </nav>
@@ -93,11 +94,11 @@
                 </div>
 
                 <div class="swiper-slide">
-                        <img class="collection-img" src="images/mapleButter.png" alt="">
-                        <p>たべっ子どうぶつメープルバター味<br>
-                            なかなかお目にかかれず<br>
-                            レア度は高め。</p>
-                        <a href="">Buy</a>
+                    <img class="collection-img" src="images/mapleButter.png" alt="">
+                    <p>たべっ子どうぶつメープルバター味<br>
+                        なかなかお目にかかれず<br>
+                        レア度は高め。</p>
+                    <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
@@ -109,32 +110,42 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="" alt="">
-                    <p></p>
+                    <img class="collection-img" src="images/chokolate.png" alt="">
+                    <p>たべっ子どうぶつチョコビスケット<br>
+                        チョコレートがたっぷり<br>
+                        かかった一品。</p>
                     <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="" alt="">
-                    <p></p>
+                    <img class="collection-img" src="images/suizokukann.png" alt="">
+                    <p>たべっ子水族館<br>
+                        たべっ子動物の姉妹。<br>
+                        しみチョコのチョコが染み込んでいる。</p>
                     <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="" alt="">
-                    <p></p>
+                    <img class="collection-img" src="images/suizokukanWhite.png" alt="">
+                    <p>たべっ子水族館ホワイト<br>
+                        水族館の仲間たちにホワイトチョコ<br>
+                        が染み込んだ一箱。</p>
                     <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="" alt="">
-                    <p></p>
+                    <img class="collection-img" src="images/mix.png" alt="">
+                    <p>たべっ子どうぶつミックス<br>
+                        定番のバター味とこの箱でしか<br>
+                        楽しめないメープルバター味のミックス。</p>
                     <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="" alt="">
-                    <p></p>
+                    <img class="collection-img" src="images/veg.png" alt="">
+                    <p>たべっ子どうぶつおやさい<br>
+                        ６種の野菜が入って<br>
+                        栄養満点。</p>
                     <a href="">Buy</a>
                 </div>
             </div>
@@ -150,8 +161,10 @@
         var mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
-            slidesPerView: 3, //3枚表示したい。
-            spaceBetween: 20,
+            slidesPerView: 2.8, //3枚表示したい。
+            spaceBetween: 200,
+            //            centeredSlides : true,
+            setWrapperSize: true,
 
             //ページネーション表示の設定
             pagination: {
@@ -164,6 +177,7 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+
         })
     </script>
 
