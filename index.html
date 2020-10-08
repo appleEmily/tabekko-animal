@@ -93,11 +93,11 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <img class="collection-img" src="images/mapleButter.png" alt="">
-                    <p>たべっ子どうぶつメープルバター味<br>
-                        なかなかお目にかかれず<br>
-                        レア度は高め。</p>
-                    <a href="">Buy</a>
+                        <img class="collection-img" src="images/mapleButter.png" alt="">
+                        <p>たべっ子どうぶつメープルバター味<br>
+                            なかなかお目にかかれず<br>
+                            レア度は高め。</p>
+                        <a href="">Buy</a>
                 </div>
 
                 <div class="swiper-slide">
@@ -147,11 +147,11 @@
 
     </div>
     <script>
-        var mySwiper = new Swiper('.collection-item', {
+        var mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
             slidesPerView: 3, //3枚表示したい。
-            centeredSlides: true,
+            spaceBetween: 20,
 
             //ページネーション表示の設定
             pagination: {
@@ -163,11 +163,6 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-
-            //スクロールバー表示の設定
-            scrollbar: {
-                el: '.swiper-scrollbar', //要素の指定
             },
         })
     </script>
