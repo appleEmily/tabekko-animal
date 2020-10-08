@@ -70,6 +70,7 @@ header h1 {
     ;
 }
 
+/*aboutのところ。*/
 .wrapper {
     width: 100%;
     overflow: hidden;
@@ -86,6 +87,7 @@ header h1 {
     font-family: "mushin";
     font-size: 50px;
     margin: 100px 0 80px 0;
+    text-align: center;
 }
 
 .section p {
@@ -148,4 +150,59 @@ header h1 {
     float: left;
     
 /*    テキストをどのように中央に表示するか。*/
+}
+
+/*たべっ子どうぶつシリーズ*/
+.swiper-container {
+    max-width: 1020px;
+/*    overflow: hidden;*/
+/*    padding: 40px;*/
+    margin-bottom: 50px;
+}
+
+#collection {
+    overflow: hidden;
+/*    display: flex;*/
+/*    width: 100%;*/
+    margin: 0 0 50px 0;;
+    
+}
+.swiper-slide {
+/*    overflow: hidden;*/
+    border: 1px solid #333;
+    border-radius: 3px;
+/*    display: inline-block;*/
+    padding: 20px;
+/*    width: 300px;*/
+    display: inline-block;
+}
+
+.swiper-slide p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.swiper-slide a {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: "gokuboso";
+    color: #333;
+    text-decoration: none;
+    background-color: white;
+    width: 160px;
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+
+/*フッター*/
+#footer {
+    font-family: "gokuboso";
+    font-size: 25px;
+    border-top: 1px solid #B3B3B3;
+    text-align: center;
+    padding: 5px 0;
 }

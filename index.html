@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <title>たべっ子どうぶつ</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--    swiperのcss-->
+    <link rel="stylesheet" href="css/swiper.min.css">
 
     <!-- jQuery読み込んでまぁす vr3.5.1 -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 
 
+    <!--bgswitcher-->
     <script type="text/javascript" src="js/jquery.bgswitcher.js"></script>
+    <!--    swiper-->
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <!--    slick-->
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
 
 </head>
@@ -23,7 +30,7 @@
                 <ul>
                     <li><a href="">ギャラリー</a></li>
                     <li><a href="">グッズ</a></li>
-                    <li><a href="">シリーズ</a></li>
+                    <li><a href="/index.html#collection">シリーズ</a></li>
                     <li><a href="/index.html#about">About</a></li>
 
                 </ul>
@@ -48,7 +55,7 @@
                 大人になってもふと子供の頃を思い出して食べてくなり<br>
                 仕事や学校の帰り道に手にとっている方も<br>
                 多いのではないでしょうか。</p>
-                
+
             <div class="box" id="box-left">
                 <h3>株式会社ギンビスの由来</h3>
                 <p>「銀座」＋「ビスケット」という由来から<br>
@@ -72,7 +79,106 @@
             </div>
         </div>
     </div>
-    <div></div>
+    <div class="wrapper" id="collection">
+        <h2>たべっ子シリーズ</h2>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="collection-img" src="images/tabekko.png" alt="">
+                    <p>たべっ子どうぶつバター味<br>
+                        誰もが一度は食べたことあるであろう<br>
+                        定番の味。</p>
+                    <a href="">coming soon</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="images/mapleButter.png" alt="">
+                    <p>たべっ子どうぶつメープルバター味<br>
+                        なかなかお目にかかれず<br>
+                        レア度は高め。</p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="images/white.png" alt="">
+                    <p>白いたべっ子どうぶつ<br>
+                        定番バター味にホワイトチョコレート<br>
+                        を染み込ませた一箱。</p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="" alt="">
+                    <p></p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="" alt="">
+                    <p></p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="" alt="">
+                    <p></p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="" alt="">
+                    <p></p>
+                    <a href="">Buy</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="collection-img" src="" alt="">
+                    <p></p>
+                    <a href="">Buy</a>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+    </div>
+    <script>
+        var mySwiper = new Swiper('.collection-item', {
+            // 以下にオプションを設定
+            loop: true, //最後に達したら先頭に戻る
+            slidesPerView: 3, //3枚表示したい。
+            centeredSlides: true,
+
+            //ページネーション表示の設定
+            pagination: {
+                el: '.swiper-pagination', //ページネーションの要素
+                type: 'bullets', //ページネーションの種類
+                clickable: true, //クリックに反応させる
+            },
+            //ナビゲーションボタン（矢印）表示の設定
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            //スクロールバー表示の設定
+            scrollbar: {
+                el: '.swiper-scrollbar', //要素の指定
+            },
+        })
+    </script>
+
+
+
+
+
+
+    <footer id="footer">©︎Emily Nozaki</footer>
+
 
 </body>
 
