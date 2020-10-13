@@ -69,7 +69,7 @@
             <div class="box" id="box-right">
                 <h3>たべっ子どうぶつのルーツ</h3>
                 <div class="ganso">
-                    <img class="ganso-image" src="images/tabekko.png" alt="">
+                    <img class="ganso-image" src="images/ganso.jpeg" alt="">
                     <p class="ganso-text">たべっ子どうぶつの元祖！<br>
                         「動物四十七士」には47種類<br>
                         の動物が入っています。<br>
@@ -80,68 +80,61 @@
             </div>
         </div>
     </div>
-    <div class="wrapper" id="collection">
-        <h2>たべっ子シリーズ</h2>
 
+    <div class="wrapper bg-stripe">
+        <h2>たべっ子シリーズ</h2>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/tabekko.png" alt="">
                     <p>たべっ子どうぶつバター味<br>
                         誰もが一度は食べたことあるであろう<br>
                         定番の味。</p>
                     <a href="">coming soon</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/mapleButter.png" alt="">
                     <p>たべっ子どうぶつメープルバター味<br>
                         なかなかお目にかかれず<br>
                         レア度は高め。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/white.png" alt="">
                     <p>白いたべっ子どうぶつ<br>
                         定番バター味にホワイトチョコレート<br>
                         を染み込ませた一箱。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/chokolate.png" alt="">
                     <p>たべっ子どうぶつチョコビスケット<br>
                         チョコレートがたっぷり<br>
                         かかった一品。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/suizokukann.png" alt="">
                     <p>たべっ子水族館<br>
                         たべっ子動物の姉妹。<br>
                         しみチョコのチョコが染み込んでいる。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/suizokukanWhite.png" alt="">
                     <p>たべっ子水族館ホワイト<br>
                         水族館の仲間たちにホワイトチョコ<br>
                         が染み込んだ一箱。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/mix.png" alt="">
                     <p>たべっ子どうぶつミックス<br>
                         定番のバター味とこの箱でしか<br>
                         楽しめないメープルバター味のミックス。</p>
                     <a href="">Buy</a>
                 </div>
-
-                <div class="swiper-slide">
+                <div class="swiper-slide tabekkobox">
                     <img class="collection-img" src="images/veg.png" alt="">
                     <p>たべっ子どうぶつおやさい<br>
                         ６種の野菜が入って<br>
@@ -149,20 +142,41 @@
                     <a href="">Buy</a>
                 </div>
             </div>
-
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-scrollbar"></div>
         </div>
-
+        <div class="collection-title">
+            <h3><span class="mirror">/</span>こんなのもあるよ！/</h3>
+            <h2>たべっこシリーズ</h2>
+        </div>
+        <div class="ad-collection">
+            <div class="collection-ad">
+                <div class="tabekkobox tabekkobox-ad">
+                    <img class="collection-img" src="images/pukukko.png" alt="">
+                    <p>ぷくっ子どうぶつ<br>
+                        うすしお味のポテトスナック。<br>
+                        18種類の動物が入っている。</p>
+                    <a href="">Buy</a>
+                </div>
+                <div class="tabekkobox tabekkobox-ad">
+                    <img class="collection-img" src="images/baby.png" alt="">
+                    <p>たべっ子BABY<br>
+                        生後１歳頃から食べられるビスケット<br>
+                        国産小麦100％</p>
+                    <a href="">Buy</a>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
-            slidesPerView: 2.8, //3枚表示したい。
-            spaceBetween: 200,
+            slidesPerView: 5, //3枚表示したい。
+            spaceBetween: 80,
             //            centeredSlides : true,
             setWrapperSize: true,
 
@@ -180,11 +194,16 @@
 
         })
     </script>
-
-
-
-
-
+    
+    <div class="wrapper galary">
+        <h1 class="title">Images</h1>
+        <div class="images-slide">
+            <img src="images/test1.jpeg" alt="">
+            <img src="images/test2.jpg" alt="">
+            <img src="images/test3.jpg" alt="">
+            <img src="images/test4.jpg" alt="">
+        </div>
+    </div>
 
     <footer id="footer">©︎Emily Nozaki</footer>
 

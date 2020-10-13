@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-    position:fixed;
+    position: fixed;
     z-index: 3;
     width: 100%;
     font-family: "gokuboso";
@@ -93,6 +93,11 @@ header h1 {
     text-align: center;
 }
 
+.wrapper h3 {
+    font-family: "mushin";
+    font-size: 25px;
+}
+
 .section p {
     text-align: left;
     font-family: "gokuboso";
@@ -112,7 +117,8 @@ header h1 {
 
 .box {
     border: 1px solid #333;
-    max-width: 60%;
+    border-radius: 3px;
+    max-width: 50%;
     margin-bottom: 30px;
     overflow: hidden;
 }
@@ -124,8 +130,6 @@ header h1 {
 }
 
 .box h3 {
-    font-family: "mushin";
-    font-size: 25px;
     width: auto;
 }
 
@@ -140,55 +144,52 @@ header h1 {
 }
 
 .ganso {
-    margin-bottom: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .ganso-image {
-    float: left;
-    margin-bottom: 30px;
-}
-
-.ganxo-text {
-    display: table-cell;
-    float: left;
-    
-/*    テキストをどのように中央に表示するか。*/
+    width: 40%;
 }
 
 /*たべっ子どうぶつシリーズ*/
+
 .swiper-container {
     max-width: 100%;
-/*    overflow: hidden;*/
-/*    padding: 40px;*/
     margin-bottom: 50px;
-    padding-bottom: 50px;;
+    padding-bottom: 50px;
 }
 
-#collection {
+/*背景にストライプ柄を出します。*/
+.bg-stripe {
     overflow: hidden;
-/*    display: flex;*/
-/*    width: 100%;*/
-    margin: 0 0 50px 0;;
-    
+    background: repeating-linear-gradient(to right,
+            rgba(179, 179, 179, 0.4) 0,
+            rgba(179, 179, 179, 0.4) 140px,
+            #ffffff 0,
+            #ffffff 280px);
+    padding-bottom: 100px;
+
 }
-.swiper-slide {
-/*    overflow: hidden;*/
+
+.tabekkobox {
     border: 1px solid #333;
     border-radius: 3px;
-/*    display: inline-block;*/
     padding: 20px;
     width: 300px;
-/*    width: 47rem;*/
     display: inline-block;
+    background-color: white;
 }
 
-.swiper-slide p {
+.tabekkobox p {
     font-size: 14px;
     text-align: center;
     font-family: "gokuboso";
+    line-height: 1.5em;
 }
 
-.swiper-slide a {
+.tabekkobox a {
     display: block;
     text-align: center;
     font-size: 25px;
@@ -200,6 +201,57 @@ header h1 {
     border: 1px solid #B3B3B3;
     border-radius: 3px;
     padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.collection-img {
+    width: 90%;
+    padding: 5%;
+}
+
+
+/*こんなのもあるよコーナー*/
+
+.collection-title {
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-top: 200px;
+    position: relative;
+}
+
+/*バックスラッシュを打ちたい。*/
+.mirror {
+    /* 横反転 : cos sin -sin cos : Y軸下向きが正 */
+    display: inline-block;
+    width: 15px;
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(mirror=1);
+}
+
+.collection-title h2 {
+    margin-top: 5px;
+}
+
+.collection-title h3 {
+    transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    position: absolute;
+    top: -50px;
+    left: 15%;
+
+}
+
+.collection-ad {
+    max-width: 1020px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.tabekkobox-ad {
+    /*    margin: 30px 50px;*/
     margin: 0 auto;
 }
 
