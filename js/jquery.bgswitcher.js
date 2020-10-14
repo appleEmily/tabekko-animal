@@ -385,7 +385,7 @@
    */
   BgSwitcher.defaultConfig = {
     images: [],
-    interval: 5000,
+    interval: 3000,
     start: true,
     loop: true,
     shuffle: false,

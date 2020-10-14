@@ -111,6 +111,10 @@ header h1 {
     margin-bottom: 500px;
 }
 
+#about {
+    margin-bottom: 150px;
+}
+
 /*めも*/
 /*wrapperって作ったやつに線が引けレア良い。けど、js次第ではwrapper要らなくて、sectionでいけるのかも？*/
 
@@ -204,6 +208,24 @@ header h1 {
     margin: 0 auto;
 }
 
+.tabekkobox a:hover {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: "gokuboso";
+    color: white;
+    text-decoration: none;
+    background-color: rgb(192, 138, 75);
+    max-width: 160px;
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    /*    ボワッと出す*/
+    transition: 0.5s;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
 .collection-img {
     width: 90%;
     padding: 5%;
@@ -255,6 +277,11 @@ header h1 {
     margin: 0 auto;
 }
 
+/*写真を表示するところ*/
+
+.gallery {
+    margin-top: 150px;
+}
 
 /*フッター*/
 #footer {
@@ -263,4 +290,92 @@ header h1 {
     border-top: 1px solid #B3B3B3;
     text-align: center;
     padding: 5px 0;
+}
+
+
+/*この下にpopUpの仮の設定。*/
+/* 全体設定 */
+
+.flexLine {
+    display: inline-flex;
+    margin: 0 auto;
+    
+}
+* {
+    box-sizing: border-box;
+}
+
+/* ポップアップウインドウの設定 */
+.popup {
+/*    background-color: #efefef;*/
+/*    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+/* チェックボックスの初期設定 */
+#popup-on {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on:checked + .popup {
+    display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close {
+    background: white;
+    color: #b3b3b3;
+    font-size: 30px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+}
+
+/* 閉じるボタン */
+.btn-close {
+    background: #b3b3b3;
+    border-radius: 10px;
+    color: white;
+    font-family: "gokuboso";
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    text-align: center;
+}
+
+/* 開くボタン */
+.btn-open {
+    cursor: pointer;
+    margin: 0;
+    width: 95%;
+    text-align: center;
+    align-items: center;
+}
+
+.flex-btn-open {
+   padding: 0 90px;
+}
+
+.pop-box-second {
+    display: inline-block;
+}
+
+
+
+/* ポップアップの内容 */
+.popup-content {
+    margin: 40px auto 40px auto;
+    width: 90%;
 }

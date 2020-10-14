@@ -42,7 +42,7 @@
         <!--       bgswicher を導入して背景の写真を変えます-->
         <script>
             $(".topPic").bgswitcher({
-                images: ["images/test1.jpeg", "images/test2.jpg", "images/test3.jpg", "images/test4.jpg"],
+                images: ["images/top2-1.png", "images/top3-2.png", "images/top5-1.png", "images/top4.png", "images/top3-1.png", "images/top6.png", "images/top1.png"],
             });
         </script>
     </header>
@@ -171,6 +171,105 @@
         </div>
     </div>
 
+    <div class="wrapper">
+        <h2>グッズ</h2>
+        <div class="section">
+            <div class="firstLine flexLine">
+                <div class="pop-box">
+                    <label for="popup-on"><label for="popup-on">
+                            <div class="btn-open flex-btn-open"><img src="images/villege_goods_before.png" alt="" class="layer-img"></div>
+                        </label>
+                        <input type="checkbox" id="popup-on">
+                        <div class="popup">
+                            <label for="popup-on" class="icon-close"></label>
+                            <div class="popup-content">
+                                <img src="images/villege_goods.png" alt="" class="layer-img">
+                                <!-- ./ポップアップの中身　ここまで -->
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="pop-box">
+                    <label for="popup-on"><label for="popup-on">
+                            <div class="btn-open flex-btn-open"><img src="images/kuji_before.png" alt="" class="layer-img"></div>
+                        </label>
+                        <input type="checkbox" id="popup-on">
+                        <div class="popup">
+                            <label for="popup-on" class="icon-close"></label>
+                            <div class="popup-content">
+                                <img src="images/kuji_after.png" alt="" class="layer-img">
+                                <!-- ./ポップアップの中身　ここまで -->
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="secondLine">
+                <div class="pop-box pop-box-second">
+                    <label for="popup-on"><label for="popup-on">
+                            <div class="btn-open" id="second"><img src="images/game_before.png" alt="" class="layer-img"></div>
+                        </label>
+                        <input type="checkbox" id="popup-on">
+                        <div class="popup">
+                            <label for="popup-on" class="icon-close"></label>
+                            <div class="popup-content">
+                                <img src="images/kuji_after.png" alt="" class="layer-img">
+                                <!-- ./ポップアップの中身　ここまで -->
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="thirdLine flexLine">
+                <div class="pop-box">
+                    <label for="popup-on"><label for="popup-on">
+                            <div class="btn-open flex-btn-open"><img src="images/dd_before.png" alt="" class="layer-img"></div>
+                        </label>
+                        <input type="checkbox" id="popup-on">
+                        <div class="popup">
+                            <label for="popup-on" class="icon-close"></label>
+                            <div class="popup-content">
+                                <img src="images/kuji_after.png" alt="" class="layer-img">
+                                <!-- ./ポップアップの中身　ここまで -->
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="pop-box">
+                    <label for="popup-on"><label for="popup-on">
+                            <div class="btn-open flex-btn-open"><img src="images/next_before.png" alt="" class="layer-img"></div>
+                        </label>
+                        <input type="checkbox" id="popup-on">
+                        <div class="popup">
+                            <label for="popup-on" class="icon-close"></label>
+                            <div class="popup-content">
+                                <img src="images/kuji_after.png" alt="" class="layer-img">
+                                <!-- ./ポップアップの中身　ここまで -->
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--    写真が出るギャラリー-->
+    <div class="wrapper gallery">
+        <h2 class="title">ギャラリー</h2>
+        <div class="images-slide">
+            <img src="images/test1.jpeg" alt="">
+            <img src="images/test2.jpg" alt="">
+            <img src="images/test3.jpg" alt="">
+            <img src="images/test4.jpg" alt="">
+        </div>
+    </div>
+
+
+    <footer id="footer">©︎Emily Nozaki</footer>
+
+
+    <!--        swiperの設定。　　-->
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
@@ -194,18 +293,6 @@
 
         })
     </script>
-    
-    <div class="wrapper galary">
-        <h1 class="title">Images</h1>
-        <div class="images-slide">
-            <img src="images/test1.jpeg" alt="">
-            <img src="images/test2.jpg" alt="">
-            <img src="images/test3.jpg" alt="">
-            <img src="images/test4.jpg" alt="">
-        </div>
-    </div>
-
-    <footer id="footer">©︎Emily Nozaki</footer>
 
 
 </body>
