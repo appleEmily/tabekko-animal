@@ -18,78 +18,43 @@ body {
     margin: 0;
 }
 
-/*ローディング画面*/
+/*ローディング*/
+/* 非表示 */
+.is-hide {
+    display: none;
+}
 
-/*▼▼ ここから追加する ▼▼*/
-.loader-wrap {
-	position: fixed;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+/* LOADING */
+#loader-bg {
+    background: #ffffff;
     height: 100%;
-    background: #fff;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
-/*▲▲ ここまで追加する ▲▲*/
 
-.loader,
-.loader:before,
-.loader:after {
-	background: #ffffff;
-	-webkit-animation: load1 1s infinite ease-in-out;
-	animation: load1 1s infinite ease-in-out;
-	width: 1em;
-	height: 4em;
+#loader {
+    height: 120px;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    position: fixed;
+    top: 50%;
+    width: 120px;
 }
-.loader {
-	color: #ffffff;
-	text-indent: -9999em;
-	margin: 88px auto;
-	position: relative;
-	font-size: 11px;
-	-webkit-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
+
+#loader p {
+    color: #b3b3b3;
+    font-size: 20px;
+/*    line-height: 1.4;*/
+    text-align: center;
+    font-family: "gokuboso";
 }
-.loader:before,
-.loader:after {
-	position: absolute;
-	top: 0;
-	content: '';
-}
-.loader:before {
-	left: -1.5em;
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-}
-.loader:after {
-	left: 1.5em;
-}
-@-webkit-keyframes load1 {
-	0%,
-	80%,
-	100% {
-		box-shadow: 0 0;
-		height: 4em;
-	}
-	40% {
-		box-shadow: 0 -2em;
-		height: 5em;
-	}
-}
-@keyframes load1 {
-	0%,
-	80%,
-	100% {
-		box-shadow: 0 0;
-		height: 4em;
-	}
-  	40% {
-		box-shadow: 0 -2em;
-		height: 5em;
-	}
+
+#loader p img {
+    display: inline-block;
 }
 
 
@@ -401,11 +366,11 @@ button.seemore::after {
 button.seemore:hover::after {
     top: 30px;
 }
- 
+
 .on-click {
-    color: transparent!important;
+    color: transparent !important;
 }
- 
+
 .on-click {
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
@@ -428,7 +393,7 @@ button.seemore:hover::after {
 /* ポップアップウインドウの設定 */
 .popup {
     /*    background-color: #efefef;*/
-/*        box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
+    /*        box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
     display: none;
     position: fixed;
     top: 0;

@@ -13,7 +13,6 @@
     <!-- jQuery読み込んでまぁす vr3.5.1 -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 
-
     <!--bgswitcher-->
     <script type="text/javascript" src="js/jquery.bgswitcher.js"></script>
     <!--    swiper-->
@@ -25,25 +24,37 @@
 </head>
 
 <body>
-    <!--   loading画面-->
-    <div class="loader-wrap">
-        <div class="loader">Now Loading...</div>
+
+    <!--       loading画面-->
+    <div id="loader-bg" class="is-hide">
+        <div id="loader" class="is-hide">
+            <p>
+                <img src="images/loading.gif"><br>
+                Now Loading
+            </p>
+        </div>
     </div>
+
     <script>
-        $(function() {
-            var loader = $('.loader-wrap');
+        var bg = $('#loader-bg'),
+            loader = $('#loader');
+        /* ローディング画面の非表示を解除 */
+        bg.removeClass('is-hide');
+        loader.removeClass('is-hide');
 
-            //ページの読み込みが完了したらアニメーションを非表示
-            $(window).on('load', function() {
-                loader.fadeOut();
-            });
+        /* 読み込み完了 */
+        $(window).on('load', stopload);
 
-            //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-            setTimeout(function() {
-                loader.fadeOut();
-            }, 3000);
-        });
+        /* 10秒経ったら強制的にローディング画面を非表示にする */
+        setTimeout('stopload()', 10000);
+
+        /* ローディング画面を非表示にする処理 */
+        function stopload() {
+            bg.delay(900).fadeOut(800);
+            loader.delay(900).fadeOut(300);
+        }
     </script>
+
     <header>
         <div class="topPic" id="top">
             <nav>
