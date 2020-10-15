@@ -383,17 +383,24 @@ button.seemore:hover::after {
 .flexLine {
     display: inline-flex;
     margin: 0 auto;
-
 }
 
 * {
     box-sizing: border-box;
 }
 
+#goods img {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
+}
+.pop-box {
+    margin: 0 auto;
+}
+.pop-box img {
+    text-align: center;
+}
 /* ポップアップウインドウの設定 */
 .popup {
-    /*    background-color: #efefef;*/
-    /*        box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
+    background: rgba(255, 255, 255, 0.5);
     display: none;
     position: fixed;
     top: 0;
@@ -404,9 +411,106 @@ button.seemore:hover::after {
     width: 100%;
     height: 100%;
     border: none;
-
-
 }
+
+.goods-title {
+    font-family: "mushin";
+    font-size: 25px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+}
+.goods-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    z-index: 1000;
+    
+}
+.goods-img {
+    position: relative;
+}
+
+#inu-title {
+    left: 52%;
+}
+
+#inu-text {
+    left: 52%;
+}
+
+#dd-title {
+    top: 38%;
+    left: 50%;
+}
+
+#dd-text {
+    top: 50%;
+    left: 50%;
+}
+
+#ushi-title {
+    left: 53%;
+}
+#ushi-text {
+    top:44%;
+    left: 53%;
+}
+/*公式サイトに飛ぶボタン*/
+.button {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: "gokuboso";
+    color: #333;
+    text-decoration: none;
+    background-color: white;
+    max-width: 160px;
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    z-index: 1000;
+    position: absolute;
+    top: 54%;
+    left: 48%;
+}
+
+.button:hover {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: "gokuboso";
+    color: white;
+    text-decoration: none;
+    background-color: rgb(192, 138, 75);
+    max-width: 160px;
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    /*    ボワッと出す*/
+    transition: 0.5s;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+#button-kuji {
+    left: 46.5%;
+}
+#button-game {
+    left: 46%;
+}
+
+#button-dd {
+    top:63%;
+    left: 47%;
+}
+
 
 /*ビレバン*/
 /* チェックボックスの初期設定 */
@@ -417,7 +521,9 @@ button.seemore:hover::after {
 /* チェックされたらポップアップウインドウを開く */
 #popup-on:checked + .popup {
     display: block;
+    z-index: 999;
 }
+
 
 /*くじ*/
 #popup-on-lion {
@@ -426,6 +532,7 @@ button.seemore:hover::after {
 
 #popup-on-lion:checked + .popup {
     display: block;
+    z-index: 999;
 }
 
 /*アミューズメント*/
@@ -435,6 +542,7 @@ button.seemore:hover::after {
 
 #popup-on-koumori:checked + .popup {
     display: block;
+    z-index: 999;
 }
 
 /*DD*/
@@ -444,6 +552,7 @@ button.seemore:hover::after {
 
 #popup-on-ahiru:checked + .popup {
     display: block;
+    z-index: 999;
 }
 
 /*coming  soon*/
@@ -453,35 +562,8 @@ button.seemore:hover::after {
 
 #popup-on-ushi:checked + .popup {
     display: block;
+    z-index: 999;
 }
-
-
-/* 閉じるアイコン（右上） */
-/*
-.icon-close {
-    background: white;
-    color: #b3b3b3;
-    font-size: 30px;
-    padding: 0 10px;
-    position: absolute;
-    right: 0;
-}
-*/
-
-/* 閉じるボタン */
-/*
-.btn-close {
-    background: #b3b3b3;
-    border-radius: 10px;
-    color: white;
-    font-family: "gokuboso";
-    padding: 10px;
-    cursor: pointer;
-    margin: 10px auto;
-    width: 30%;
-    text-align: center;
-}
-*/
 
 /* 開くボタン */
 .btn-open {
