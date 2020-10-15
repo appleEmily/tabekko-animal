@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>たべっ子どうぶつ</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <link rel="stylesheet" href="css/style.css">
     <!--    swiperのcss-->
@@ -253,13 +254,39 @@
     <!--    写真が出るギャラリー-->
     <div class="wrapper gallery" id="gallery">
         <h2 class="title">ギャラリー</h2>
-        <div class="images-slide">
-            <img src="images/top1.png" alt="">
-            <img src="images/top2-1.png" alt="">
-            <img src="images/top3-2.png" alt="">
-            <img src="images/top4.png" alt="">
+        <div class="first-show-pic">
+            <img src="images/gallery/gallery7.png" alt="">
+            <img src="images/gallery/gallery8.png" alt="">
+            <img src="images/gallery/gallery18.png" alt="">
         </div>
+        <div class="all-pic">
+            <img src="images/gallery/gallery1.png" alt="">
+            <img src="images/gallery/gallery2-3.png" alt="">
+            <img src="images/gallery/gallery3.png" alt="">
+            <img src="images/gallery/gallery4.png" alt="">
+            <img src="images/gallery/gallery5.png" alt="">
+            <img src="images/gallery/gallery6.png" alt="">
+            <img src="images/gallery/gallery9.png" alt="">
+            <img src="images/gallery/gallery10.png" alt="">
+            <img src="images/gallery/gallery11.png" alt="">
+            <img src="images/gallery/gallery12.png" alt="">
+            <img src="images/gallery/gallery13.png" alt="">
+            <img src="images/gallery/gallery14.png" alt="">
+            <img src="images/gallery/gallery15.png" alt="">
+            <img src="images/gallery/gallery16.png" alt="">
+            <img src="images/gallery/gallery17.png" alt="">
+            <img src="images/gallery/gallery19.png" alt="">
+            <img src="images/gallery/gallery20.png" alt="">
+        </div>
+        <button class="seemore">SEE MORE</button>
     </div>
+
+    <script>
+        $(".seemore").on("click", function() {
+            $(this).toggleClass("on-click");
+            $(".all-pic").slideToggle(1000);
+        });
+    </script>
 
 
     <footer id="footer">©︎Emily Nozaki</footer>

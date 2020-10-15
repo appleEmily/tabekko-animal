@@ -281,19 +281,58 @@ header h1 {
 
 .gallery {
     margin-top: 150px;
+    margin-bottom: 130px;
 }
 
 .gallery img {
     width: 30%;
 }
 
-/*フッター*/
-#footer {
-    font-family: "gokuboso";
-    font-size: 25px;
-    border-top: 1px solid #B3B3B3;
-    text-align: center;
-    padding: 5px 0;
+.all-pic {
+    display: none;
+}
+
+button.seemore {
+    position: relative;
+    height: 80px;
+    width: 90px;
+    margin: 40px auto;
+    display: block;
+    background-color: transparent;
+    color: #b3b3b3;
+    padding-bottom: 40px;
+    border: none;
+    outline: 0;
+    transition: .5s;
+    -erbkit-transition: .5s;
+}
+
+button.seemore::after {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: solid 3px #b3b3b3;
+    border-right: solid 3px #b3b3b3;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    right: 28px;
+    top: 25px;
+    transition: .5s;
+    -erbkit-transition: .5s;
+}
+
+button.seemore:hover::after {
+    top: 30px;
+}
+ 
+.on-click {
+    color: transparent!important;
+}
+ 
+.on-click {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
 }
 
 
@@ -313,7 +352,7 @@ header h1 {
 /* ポップアップウインドウの設定 */
 .popup {
     /*    background-color: #efefef;*/
-    /*    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
+/*        box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);*/
     display: none;
     position: fixed;
     top: 0;
@@ -323,6 +362,7 @@ header h1 {
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    border: none;
 
 
 }
@@ -376,6 +416,7 @@ header h1 {
 
 
 /* 閉じるアイコン（右上） */
+/*
 .icon-close {
     background: white;
     color: #b3b3b3;
@@ -384,8 +425,10 @@ header h1 {
     position: absolute;
     right: 0;
 }
+*/
 
 /* 閉じるボタン */
+/*
 .btn-close {
     background: #b3b3b3;
     border-radius: 10px;
@@ -397,6 +440,7 @@ header h1 {
     width: 30%;
     text-align: center;
 }
+*/
 
 /* 開くボタン */
 .btn-open {
@@ -421,4 +465,13 @@ header h1 {
 .popup-content {
     margin: 40px auto 40px auto;
     width: 90%;
+}
+
+/*フッター*/
+#footer {
+    font-family: "gokuboso";
+    font-size: 25px;
+    border-top: 1px solid #B3B3B3;
+    text-align: center;
+    padding: 5px 0;
 }
