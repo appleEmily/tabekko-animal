@@ -391,7 +391,7 @@ button.seemore:hover::after {
     box-sizing: border-box;
 }
 
-#goods img {
+#goods img:hover {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
 }
 
