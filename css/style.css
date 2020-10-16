@@ -65,6 +65,7 @@ body {
     background-position: center;
 }
 
+/*ナビ*/
 nav {
     position: fixed;
     z-index: 3;
@@ -452,7 +453,7 @@ button.seemore:hover::after {
 }
 
 #ahiru-info {
-    top:  57%;
+    top: 57%;
 }
 
 .popup-content img {
@@ -590,8 +591,6 @@ button.seemore:hover::after {
     display: inline-block;
 }
 
-
-
 /*フッター*/
 #footer {
     font-family: "gokuboso";
@@ -599,4 +598,31 @@ button.seemore:hover::after {
     border-top: 1px solid #B3B3B3;
     text-align: center;
     padding: 5px 0;
+}
+
+
+@media screen and (max-width : 480px) {
+    .topPic {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .wrapper h2 {
+        font-family: "mushin";
+        font-size: 50px;
+        margin: 100px 0 80px 0;
+    }
+
+    .wrapper h3 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 15px;
+    }
+
+
 }
