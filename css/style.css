@@ -48,7 +48,7 @@ body {
 #loader p {
     color: #b3b3b3;
     font-size: 20px;
-/*    line-height: 1.4;*/
+    /*    line-height: 1.4;*/
     text-align: center;
     font-family: "gokuboso";
 }
@@ -335,28 +335,30 @@ header h1 {
 
 button.seemore {
     position: relative;
-    height: 80px;
-    width: 90px;
+    height: 30px;
+    width: 160px;
     margin: 40px auto;
-    display: block;
-    background-color: transparent;
+    display: inline-block;
+    background-color: white;
     color: #b3b3b3;
-    padding-bottom: 40px;
-    border: none;
     outline: 0;
     transition: .5s;
     -erbkit-transition: .5s;
+    border: solid 1px #b3b3b3;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+}
+
+button.seemore:hover {
+    background-color: #b3b3b3;
+    color: white;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 
 button.seemore::after {
-    content: " ";
+    content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border-top: solid 3px #b3b3b3;
-    border-right: solid 3px #b3b3b3;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
     right: 28px;
     top: 25px;
     transition: .5s;
@@ -368,12 +370,12 @@ button.seemore:hover::after {
 }
 
 .on-click {
-    color: transparent !important;
+    color: white;
 }
 
 .on-click {
-    transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 
 
@@ -392,12 +394,15 @@ button.seemore:hover::after {
 #goods img {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
 }
+
 .pop-box {
     margin: 0 auto;
 }
+
 .pop-box img {
     text-align: center;
 }
+
 /* ポップアップウインドウの設定 */
 .popup {
     background: rgba(255, 255, 255, 0.5);
@@ -413,55 +418,72 @@ button.seemore:hover::after {
     border: none;
 }
 
+.content-base {
+    position: relative;
+}
+
+/* ポップアップの内容 */
+.popup-content {
+    margin: 40px auto 40px auto;
+    width: 100%;
+    position: relative;
+}
+
+.goods-info {
+    width: 1020px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 31;
+}
+
+#inu-info {
+    top: 50%;
+    left: 52%;
+}
+
+#lion-info {
+    top: 52%;
+    left: 52%;
+}
+
+#ahiru-info {
+    top:  57%;
+}
+
+.popup-content img {
+    z-index: 30;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
 .goods-title {
     font-family: "mushin";
-    font-size: 25px;
-    position: absolute;
-    top: 33%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    z-index: 1000;
+    font-size: 21px;
     text-align: center;
 }
-.goods-text {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
-    z-index: 1000;
-    
+
+.goods-text {}
+
+#inu-text,
+#lion-text,
+#koumori-text,
+#dd-text,
+#ushi-text {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 22px;
 }
+
 .goods-img {
     position: relative;
 }
 
-#inu-title {
-    left: 52%;
-}
-
-#inu-text {
-    left: 52%;
-}
-
-#dd-title {
-    top: 38%;
-    left: 50%;
-}
-
-#dd-text {
-    top: 50%;
-    left: 50%;
-}
-
-#ushi-title {
-    left: 53%;
-}
-#ushi-text {
-    top:44%;
-    left: 53%;
-}
 /*公式サイトに飛ぶボタン*/
 .button {
     display: block;
@@ -476,10 +498,7 @@ button.seemore:hover::after {
     border-radius: 3px;
     padding: 10px 20px;
     margin: 0 auto;
-    z-index: 1000;
-    position: absolute;
-    top: 54%;
-    left: 48%;
+
 }
 
 .button:hover {
@@ -499,27 +518,16 @@ button.seemore:hover::after {
     transition: 0.5s;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
-#button-kuji {
-    left: 46.5%;
-}
-#button-game {
-    left: 46%;
-}
-
-#button-dd {
-    top:63%;
-    left: 47%;
-}
 
 
 /*ビレバン*/
 /* チェックボックスの初期設定 */
-#popup-on {
+#popup-on-inu {
     display: none;
 }
 
 /* チェックされたらポップアップウインドウを開く */
-#popup-on:checked + .popup {
+#popup-on-inu:checked + .popup {
     display: block;
     z-index: 999;
 }
@@ -583,12 +591,6 @@ button.seemore:hover::after {
 }
 
 
-
-/* ポップアップの内容 */
-.popup-content {
-    margin: 40px auto 40px auto;
-    width: 90%;
-}
 
 /*フッター*/
 #footer {
