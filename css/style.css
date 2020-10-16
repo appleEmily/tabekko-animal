@@ -70,7 +70,9 @@ nav {
     position: fixed;
     z-index: 3;
     width: 100%;
-    font-family: "gokuboso";
+    /*    font-family: "游ゴシック Medium", sans-serif;*/
+    font-family: "Centry Gothic", sans-serif;
+    /*    font-family: "gokuboso";*/
     overflow: hidden;
     border-bottom: 1px solid rgba(179, 179, 179, 0.6);
     background-color: rgba(2555, 255, 255, 0.6);
@@ -83,26 +85,24 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     float: right;
-    margin: 0px 20px 5px;
-    color: #333;
+    margin: 0px 15px 5px;
     padding-bottom: 3px;
+    color: rgb(140, 140, 140);
 }
 
 nav a:after {
     content: '';
     width: 0;
     transition: all 0.4s ease;
-    border-bottom: 3px solid #B3B3B3;
+    border-bottom: 3px solid rgb(140, 140, 140);
     display: block;
 }
 
 nav a:hover:after {
     width: 100%;
-    border-bottom: 1px solid #B3B3B3;
-
-    /*    なぜか２カ所反応することがある。*/
+    border-bottom: 1px solid rgb(140, 140, 140);
 }
 
 header h1 {
@@ -110,9 +110,20 @@ header h1 {
     font-family: "mushin";
     font-size: 80px;
     color: #333;
+    display: inline-block;
+    /*
     margin-left: 30px;
     padding-top: 70px;
+*/
     margin-top: 0;
+
+    top: 8%;
+    left: 2%;
+    /*
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+*/
 }
 
 /*aboutのところ。*/
@@ -158,7 +169,7 @@ header h1 {
 }
 
 /*めも*/
-/*wrapperって作ったやつに線が引けレア良い。けど、js次第ではwrapper要らなくて、sectionでいけるのかも？*/
+/*wrapperって作ったやつに線が引けたら良い。けど、js次第ではwrapper要らなくて、sectionでいけるのかも？*/
 
 
 .box {
@@ -176,7 +187,7 @@ header h1 {
 }
 
 .box h3 {
-    width: auto;
+    display: inline-block;
 }
 
 
@@ -226,6 +237,7 @@ header h1 {
     width: 300px;
     display: inline-block;
     background-color: white;
+    /*    margin: 0 5px; */
 }
 
 .tabekkobox p {
@@ -431,7 +443,7 @@ button.seemore:hover::after {
 }
 
 .goods-info {
-    width: 1020px;
+    max-width: 1020px;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -456,6 +468,11 @@ button.seemore:hover::after {
     top: 57%;
 }
 
+.popup-content {
+    width: 100%;
+    overflow: hidden;
+}
+
 .popup-content img {
     z-index: 30;
     max-width: 1020px;
@@ -466,9 +483,8 @@ button.seemore:hover::after {
     font-family: "mushin";
     font-size: 21px;
     text-align: center;
+    display: inline-block;
 }
-
-.goods-text {}
 
 #inu-text,
 #lion-text,
@@ -610,9 +626,14 @@ button.seemore:hover::after {
         display: none;
     }
 
+    header h1 {
+        font-size: 40px;
+        margin: 0 auto;
+    }
+
     .wrapper h2 {
         font-family: "mushin";
-        font-size: 50px;
+        font-size: 30px;
         margin: 100px 0 80px 0;
     }
 
@@ -621,8 +642,97 @@ button.seemore:hover::after {
     }
 
     .section p {
-        font-size: 15px;
+        font-size: 12px;
     }
+
+    #introduction {
+        line-height: 40px;
+        margin-bottom: 150px;
+    }
+
+    .box {
+        max-width: 90%;
+        margin: 10px auto 20px;
+    }
+
+    #box-right,
+    #box-left {
+        float: none;
+        width: 100%;
+    }
+
+    #about {
+        margin-bottom: 70px;
+    }
+
+    /*    背景の栓を細く。*/
+    .bg-stripe {
+        overflow: hidden;
+        background: repeating-linear-gradient(to right,
+                rgba(179, 179, 179, 0.4) 0,
+                rgba(179, 179, 179, 0.4) 30px,
+                #ffffff 0,
+                #ffffff 60px);
+        padding-bottom: 50px;
+    }
+
+    .tabekkobox p {
+        font-size: 12px;
+    }
+
+    .collection-ad {
+        display: inline-block;
+    }
+
+    .tabekkobox-ad {
+        margin: 10px auto;
+    }
+
+    .flexLine {
+        display: inline-block;
+    }
+
+    .flex-btn-open {
+        padding: 0;
+    }
+
+    .goods-info {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    #inu-info,
+    #lion-info,
+    #ahiru-info {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    
+    .goods-title {
+        font-size: 13px;
+    }
+
+    #inu-text,
+    #lion-text,
+    #koumori-text,
+    #dd-text,
+    #ushi-text {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .popup-content img{
+        width: 100%;
+    }
+
 
 
 }

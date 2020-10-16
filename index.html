@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>たべっ子どうぶつ</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
@@ -20,11 +21,9 @@
     <!--    slick-->
     <script type="text/javascript" src="js/slick.min.js"></script>
 
-
 </head>
 
 <body>
-
     <!--       loading画面-->
     <div id="loader-bg" class="is-hide">
         <div id="loader" class="is-hide">
@@ -367,16 +366,21 @@
     <footer id="footer">©︎Emily Nozaki</footer>
 
 
-    <!--        swiperの設定。　　-->
+    <!--        swiperの設定。  -->
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             // 以下にオプションを設定
             loop: true, //最後に達したら先頭に戻る
-            slidesPerView: 5, //3枚表示したい。
-            spaceBetween: 80,
-            //            centeredSlides : true,
+            slidesPerView: 1.1, //3枚表示したい。
+            spaceBetween: 20,
+            centeredSlides: true,
             setWrapperSize: true,
-            
+            //自動再生
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
             //ページネーション表示の設定
             pagination: {
                 el: '.swiper-pagination', //ページネーションの要素
@@ -388,13 +392,13 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            
-//            breakpoints: {
-//                480: {
-//                    slidesPerView: 1,
-//                    spaceBetween: 0,
-//                }
-//            },
+
+            breakpoints: {
+                480: {
+                    slidesPerView: 5,
+                    spaceBetween: 60,
+                }
+            }
 
         })
     </script>
