@@ -396,7 +396,7 @@ button.seemore:hover::after {
 /* 全体設定 */
 
 .flexLine {
-    display: inline-flex;
+    display: flex;
     margin: 0 auto;
 }
 
@@ -452,6 +452,8 @@ button.seemore:hover::after {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     z-index: 31;
+    display: inline-flex;
+    flex-flow: column;
 }
 
 #inu-info {
@@ -476,6 +478,7 @@ button.seemore:hover::after {
 .popup-content img {
     z-index: 30;
     max-width: 1020px;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -491,7 +494,7 @@ button.seemore:hover::after {
 #koumori-text,
 #dd-text,
 #ushi-text {
-    display: inline-block;
+    /*    display: inline-block;*/
     margin: 0 auto;
     font-size: 16px;
     line-height: 22px;
@@ -702,6 +705,10 @@ button.seemore:hover::after {
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+
+        background-color: white;
+
+        width: 80%;
     }
 
     #inu-info,
@@ -712,10 +719,11 @@ button.seemore:hover::after {
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+
     }
-    
+
     .goods-title {
-        font-size: 13px;
+        font-size: 20px;
     }
 
     #inu-text,
@@ -723,16 +731,26 @@ button.seemore:hover::after {
     #koumori-text,
     #dd-text,
     #ushi-text {
-        display: inline-block;
+        /*        display: inline-block;*/
         margin: 0 auto;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 20px;
     }
-    
-    .popup-content img{
-        width: 100%;
+
+    .popup-content img {
+        opacity: 0;
     }
 
+    .popup {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
 
+    #footer {
+        font-family: "gokuboso";
+        font-size: 18px;
+        border-top: 1px solid #B3B3B3;
+        text-align: center;
+        padding: 5px 0;
+    }
 
 }
