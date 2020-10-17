@@ -478,7 +478,7 @@ button.seemore:hover::after {
 .popup-content img {
     z-index: 30;
     max-width: 1020px;
-    height: 100vh;
+/*    height: 100vh;*/
     margin: 0 auto;
 }
 
