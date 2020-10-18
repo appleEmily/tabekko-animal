@@ -678,6 +678,12 @@ button.seemore:hover::after {
                 #ffffff 60px);
         padding-bottom: 50px;
     }
+    
+    .collection-title h3 {
+        transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+        left: 5%;
+    }
 
     .tabekkobox p {
         font-size: 12px;
